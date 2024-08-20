@@ -8,7 +8,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let contentVC =  first.contentViewController {
                 guard CommandLine.arguments.count > 1 else { return }
                 let arguments = CommandLine.arguments[1...].joined(separator: "\n\n")
-
+                first.title = CommandLine.arguments[1]
                 let textField = NSTextField(frame: .init(x: 0, y: 0, width: 100, height: 100))
                 textField.font = NSFont(name: "Public Pixel", size: 16)
 
